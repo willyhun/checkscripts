@@ -5,3 +5,4 @@ cat > /etc/modprobe.d/10-rxrpc-bug-workaround.conf <<EOF
 blacklist rxrpc
 install rxrpc /bin/false
 EOF
+echo "Module load disabled (if it is a module)"
