@@ -1,6 +1,6 @@
 #!/bin/bash
-rpm -q openswan 2>&1 && echo "IPSec (openswan) found exit" && exit -1
-rpm -q libreswan 2>&1 && echo "IPSec (libreswan) found exit" && exit -1
+rpm -q openswan 2>&1 1>/dev/null && echo "IPSec (openswan) found exit" && exit -1
+rpm -q libreswan 2>&1 1>/dev/null && echo "IPSec (libreswan) found exit" && exit -1
 echo "unload the modules first"
 modprobe -r esp4 || echo "REBOOT_REQUIRED"
 modprobe -r esp6 || echo "REBOOT_REQUIRED"
